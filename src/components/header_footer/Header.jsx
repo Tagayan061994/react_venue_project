@@ -10,6 +10,7 @@ class Header extends Component {
         headerShow: false
     }
 
+<<<<<<< HEAD:src/components/header_footer/Header.jsx
     componentDidMount(){
       window.addEventListener("scroll", this.handleScroll)
     }
@@ -28,6 +29,24 @@ class Header extends Component {
         })   
       }
 
+=======
+    componentDidMount() {
+      window.addEventListener("scroll" , this.handleCsroll);
+    }
+
+
+    handleCsroll = () => {
+      if(window.scrollY > 0){
+        this.setState({
+          headerShow: true
+        })
+      }else{
+        this.setState({
+          headerShow: false
+        })
+      }
+    
+>>>>>>> fd1d944e851517e1cfa52a5436f2d143b58c6821:src/components/header_footer/Header.js
     }
 
     toggleDrawer = (value) => {
@@ -40,7 +59,11 @@ class Header extends Component {
       <AppBar
         position="fixed"
         style={{
+<<<<<<< HEAD:src/components/header_footer/Header.jsx
           backgroundColor: this.state.headerShow ? "#2f2f2f": 'transparent',
+=======
+          backgroundColor: this.state.headerShow ? "#2f2f2f" : "transparent",
+>>>>>>> fd1d944e851517e1cfa52a5436f2d143b58c6821:src/components/header_footer/Header.js
           boxShadow: "none",
           padding: "10px 0"
         }}
